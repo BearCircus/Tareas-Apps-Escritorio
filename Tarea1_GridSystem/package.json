@@ -1,0 +1,23 @@
+{
+  "name": "tarea1_gridsystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "stylesdev": "sass styles/scss:styles/css --watch",
+    "styles": "sass styles/scss:styles/css --no-source-map --watch"
+  },
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.3.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19",
+    "sass": "^1.54.5"
+  }
+}
