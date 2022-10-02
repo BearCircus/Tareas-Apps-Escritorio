@@ -1,0 +1,14 @@
+<p>noticias-articles works!</p>
+
+<div>
+  <ul>
+    <li [ngClass]="{ active: current == e }" *ngFor="let e of articles">
+      <!-- <a href="{{ e.url }}" target="_new">{{ e.title }}</a> -->
+      <a (click)="selectNoticia(e)">{{ e.title }}</a>
+      <!-- [href]=e.url -->
+    </li>
+    <!-- <li><a href="#">Noticia 2</a></li>
+  <li><a href="#">Noticia 3</a></li>
+  <li><a href="#">Noticia 4</a></li> -->
+  </ul>
+</div>

@@ -1,0 +1,38 @@
+<p>Listado de Noticias</p>
+<!-- {{ noticias }} -->
+
+<!-- <a  [href]="zelda">{{ zelda }}</a> -->
+<!-- biding de propiedad -->
+<br />
+<!-- <input type="text" placeholder="Buscar..." (keyup)="setSearch($event)" />
+<button (click)="buscar()">Buscar</button> -->
+
+<!-- con binding -->
+<form (submit)="buscar()">
+  <input
+    type="text"
+    name="buscar"
+    placeholder="Buscar..."
+    [(ngModel)]="search"
+  />
+  <button [disabled]="!search">Buscar</button>
+</form>
+<!-- directiva -->
+<!-- con el * se construye y destruye -->
+<p *ngIf="cargando">Cargando...</p>
+<h2>Resultados de: {{ lastSearch | myUpperCase }}</h2>
+<div class="panel">
+  <div>
+    <app-noticias-articles
+      [articles]="noticias"
+      (news)="selectNoticia($event)"
+      [current]="current"
+    ></app-noticias-articles>
+  </div>
+  <div>
+    <app-noticias-details
+      [item]="current"
+      (onClear)="clearCurrent()"
+    ></app-noticias-details>
+  </div>
+</div>
