@@ -22,7 +22,8 @@ export class NoticiasDetailsComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('details', this.noticia);
+    // console.log('details', this.noticia);
+    console.log(this.noticia);
     console.log('Llegaron cambios: ', changes);
   }
   clearNoticia(): void {

@@ -15,7 +15,7 @@ export class NoticiasArticlesComponent implements OnInit {
     this.current = noticia;
     this.articles = noticia;
     this.news.emit(noticia);
-    console.log('ya estoy hasta la mother');
+    // console.log('ya estoy hasta la mother');
     // console.log(this.current);
   }
   ngOnInit(): void {}

@@ -40,7 +40,7 @@ export class NoticiasComponent implements OnInit {
       console.log('te mamaste con', err);
     };
   }
-  current: any = { title: 'Notice ' };
+  current: any = {};
   selectNoticia(noticia: any) {
     // console.log('Selecciono la noticias', noticia);
     this.current = noticia;
@@ -48,7 +48,7 @@ export class NoticiasComponent implements OnInit {
   }
 
   clearCurrent(): void {
-    this.current = { title: 'Noticia' };
+    this.current = {};
   }
   // setSearch(e: any) {
   //   // console.log('key event: ', e);
