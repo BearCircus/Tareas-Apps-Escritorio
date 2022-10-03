@@ -19,11 +19,15 @@ export class NoticiasDetailsComponent implements OnInit, OnChanges {
   @Output() onClear: EventEmitter<void> = new EventEmitter();
   constructor() {}
 
+  temp: any = {};
+
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
     // console.log('details', this.noticia);
-    console.log(this.noticia);
+    this.temp = changes['noticia'].currentValue;
+    // console.log('temp', this.temp.title);
+    // console.log(this.noticia);
     console.log('Llegaron cambios: ', changes);
   }
   clearNoticia(): void {

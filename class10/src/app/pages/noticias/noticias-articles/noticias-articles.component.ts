@@ -11,12 +11,13 @@ export class NoticiasArticlesComponent implements OnInit {
   constructor() {}
 
   @Output() news: EventEmitter<Object> = new EventEmitter();
+
   selectNoticia(noticia: any) {
     this.current = noticia;
-    this.articles = noticia;
+    // this.articles = noticia;
     this.news.emit(noticia);
     // console.log('ya estoy hasta la mother');
-    // console.log(this.current);
+    console.log('Articles', this.current);
   }
   ngOnInit(): void {}
 }

@@ -44,7 +44,7 @@ export class NoticiasComponent implements OnInit {
   selectNoticia(noticia: any) {
     // console.log('Selecciono la noticias', noticia);
     this.current = noticia;
-    // console.log(this.current);
+    console.log('Noticia component', this.current);
   }
 
   clearCurrent(): void {
