@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MyUpperCasePipe } from './shared/pipes/my-upper-case.pipe';
 import { NoticiasDetailsComponent } from './pages/noticias/noticias-details/noticias-details.component';
 import { NoticiasArticlesComponent } from './pages/noticias/noticias-articles/noticias-articles.component';
-
+import { NoticiaDetailsPageComponent } from './pages/noticias/noticia-details-page/noticia-details-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +25,7 @@ import { NoticiasArticlesComponent } from './pages/noticias/noticias-articles/no
     MyUpperCasePipe,
     NoticiasDetailsComponent,
     NoticiasArticlesComponent,
+    NoticiaDetailsPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

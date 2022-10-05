@@ -28,7 +28,7 @@ export class NoticiasDetailsComponent implements OnInit, OnChanges {
     this.temp = changes['noticia'].currentValue;
     // console.log('temp', this.temp.title);
     // console.log(this.noticia);
-    console.log('Llegaron cambios: ', changes);
+    // console.log('Llegaron cambios: ', changes);
   }
   clearNoticia(): void {
     // this.noticia = { title: 'Notice' };
