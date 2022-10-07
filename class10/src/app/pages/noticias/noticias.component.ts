@@ -40,6 +40,11 @@ export class NoticiasComponent implements OnInit {
       this.noticiaService
         .getNoticias(String(sessionStorage.getItem('lastSearch')))
         .subscribe((r) => {
+          this.router.navigate(['/noticias'], {
+            queryParams: {
+              title: String(sessionStorage.getItem('lastSearch')),
+            },
+          });
           // this.search = String(sessionStorage.getItem('lastSearch'));
           this.noticias = r.articles;
         });
@@ -48,6 +53,7 @@ export class NoticiasComponent implements OnInit {
   buscar(): void {
     // console.log('Click event', e);
     this.cargando = true;
+
     this.noticiaService.getNoticias(this.search).subscribe((response) => {
       this.router.navigate(['/noticias'], {
         queryParams: { title: this.search },
